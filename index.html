@@ -20,6 +20,7 @@
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About Us</a>
+        <a href="staff.html">Staff</a>
         <a href="fleet.html">Fleet</a>
         <a href="routes.html">Routes</a>
         <a href="training.html">Training</a>
@@ -36,6 +37,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
+    <a href="staff.html">Staff</a>
     <a href="fleet.html">Fleet</a>
     <a href="routes.html">Routes</a>
     <a href="training.html">Training</a>
@@ -88,33 +90,56 @@
     </div>
 
     <!-- ===== VA STATISTICS ===== -->
+    <!--
+    ╔══════════════════════════════════════════╗
+    ║  UPDATE VA STATISTICS HERE               ║
+    ║  Change the numbers inside va-stat-num   ║
+    ║  Example: <div class="va-stat-num">5</div>
+    ║                                          ║
+    ║  PILOTS     → change the "5"            ║
+    ║  ROUTES     → change the "330+"         ║
+    ║  CODESHARES → change the "0"            ║
+    ║                                          ║
+    ║  Also update the "LAST UPDATED" line     ║
+    ║  below near the updated-note span        ║
+    ╚══════════════════════════════════════════╝
+    -->
     <section class="section" style="padding-bottom: 0;">
       <div class="section-inner">
         <p class="section-eyebrow" style="text-align:center;">Atlas Virtual</p>
         <h2 class="section-title" style="text-align:center;">VA Statistics</h2>
         <div class="section-rule" style="margin: 0 auto 40px;"></div>
-        <div class="va-stats-cards">
+        <!-- VA STATS CARDS — always stays 3-column even on mobile -->
+        <div class="va-stats-cards va-stats-cards--fixed">
+
+          <!-- STAT 1: Update number below -->
           <div class="va-stat-card">
             <div class="va-stat-icon">✈️</div>
-            <div class="va-stat-num">5</div>
+            <div class="va-stat-num">5</div><!-- ← PILOTS count -->
             <div class="va-stat-name">Pilots</div>
             <div class="va-stat-desc">Active Members</div>
           </div>
+
+          <!-- STAT 2: Update number below -->
           <div class="va-stat-card">
             <div class="va-stat-icon">🗺️</div>
-            <div class="va-stat-num">330+</div>
+            <div class="va-stat-num">330+</div><!-- ← ROUTES count -->
             <div class="va-stat-name">Routes</div>
             <div class="va-stat-desc">Global Routes</div>
           </div>
+
+          <!-- STAT 3: Update number below -->
           <div class="va-stat-card">
             <div class="va-stat-icon">🤝</div>
-            <div class="va-stat-num">0</div>
+            <div class="va-stat-num">0</div><!-- ← CODESHARES count -->
             <div class="va-stat-name">Codeshares</div>
             <div class="va-stat-desc">Partner Airlines</div>
           </div>
+
         </div>
         <div style="text-align:center; margin-top: 24px; padding-bottom: 80px;">
-          <span class="updated-note">🗓️ &nbsp;Statistics are updated monthly by our operations team</span>
+          <!-- UPDATE THE MONTH/YEAR below when you refresh stats -->
+          <span class="updated-note">🗓️ &nbsp;Statistics are updated monthly by our operations team &nbsp;|&nbsp; Last updated: May 2026</span>
         </div>
       </div>
     </section>
@@ -166,10 +191,10 @@
     </section>
 
     <!-- ===== CTA STRIP ===== -->
-    <div class="cta-strip">
-      <h2 class="cta-strip-title">Ready to Join Atlas Virtual?</h2>
-      <p class="cta-strip-desc">Check requirements and apply to become part of our elite pilot family.</p>
-      <a href="apply.html" class="btn-primary">Apply Now</a>
+    <div class="cta-strip cta-strip--compact">
+      <h2 class="cta-strip-title cta-strip-title--sm">Ready to Join Atlas Virtual?</h2>
+      <p class="cta-strip-desc cta-strip-desc--sm">Check requirements and apply to become part of our elite pilot family.</p>
+      <a href="apply.html" class="btn-primary btn--sm">Apply Now</a>
     </div>
 
     <!-- ===== FOOTER ===== -->
@@ -187,6 +212,7 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="staff.html">Staff</a></li>
             <li><a href="fleet.html">Our Fleet</a></li>
             <li><a href="routes.html">Routes</a></li>
             <li><a href="training.html">Training</a></li>
