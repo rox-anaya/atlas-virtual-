@@ -150,7 +150,7 @@ ul { list-style: none; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 62px; left: 0; right: 0;
+  top: 88px; left: 0; right: 0;
   background: var(--navy-mid);
   border-bottom: 1px solid var(--navy-border);
   padding: 16px 24px 24px;
@@ -187,7 +187,7 @@ ul { list-style: none; }
    PAGE WRAPPER
    ============================================= */
 .page-wrapper {
-  padding-top: 62px;
+  padding-top: 88px; /* 62px navbar + ~26px pride bar */
 }
 
 /* =============================================
@@ -1420,6 +1420,115 @@ footer {
 .page-hero-inner {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Nav pride bar — sits below the main nav bar */
+.nav-pride {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--navy-border);
+  text-align: center;
+  font-family: var(--font-accent);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  padding: 5px 24px;
+  width: 100%;
+}
+
+/* Mission image — prevent nose crop */
+.mission-image img {
+  object-fit: cover;
+  object-position: center top !important;
+}
+
+/* Rank epaulette image */
+.rank-epaulette {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* New rank table layout */
+.rank-table-section {
+  margin-bottom: 40px;
+}
+.rank-table-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold-dim);
+}
+.rank-table-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+.rank-table-sub {
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-left: auto;
+}
+.rank-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--navy-border);
+  background: var(--navy-light);
+  border-radius: 3px;
+  margin-bottom: 6px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.rank-row:hover {
+  border-color: var(--gold-dim);
+  transform: translateX(3px);
+}
+.rank-row-hours {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  min-width: 70px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.rank-row-info { flex: 1; }
+.rank-row-name {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white-80);
+}
+.rank-row-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* Staff mobile vertical order */
+@media (max-width: 768px) {
+  .staff-grid-ordered {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .staff-card-ceo   { order: 1; }
+  .staff-card-coo   { order: 2; }
+  .staff-card-cfo   { order: 3; }
+  .staff-card-hr    { order: 4; }
 }
 
 /* Trainee rank — centered icon above text */
