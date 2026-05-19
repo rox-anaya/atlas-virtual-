@@ -150,7 +150,7 @@ ul { list-style: none; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 88px; left: 0; right: 0;
+  top: 62px; left: 0; right: 0;
   background: var(--navy-mid);
   border-bottom: 1px solid var(--navy-border);
   padding: 16px 24px 24px;
@@ -187,7 +187,7 @@ ul { list-style: none; }
    PAGE WRAPPER
    ============================================= */
 .page-wrapper {
-  padding-top: 88px; /* 62px navbar + ~26px pride bar */
+  padding-top: 62px;
 }
 
 /* =============================================
@@ -1422,19 +1422,18 @@ footer {
   margin: 0 auto;
 }
 
-/* Nav pride bar — sits below the main nav bar */
-.nav-pride {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--navy-border);
+/* Footer pride line — very bottom of every page */
+.footer-pride {
   text-align: center;
   font-family: var(--font-accent);
   font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-dim);
-  padding: 5px 24px;
-  width: 100%;
+  color: var(--text-muted);
+  padding: 12px 24px 16px;
+  border-top: 1px solid var(--navy-border);
+  margin-top: 4px;
 }
 
 /* Mission image — prevent nose crop */
