@@ -1630,6 +1630,250 @@ footer {
 }
 
 /* =============================================
+   EVENTS BUTTONS
+   ============================================= */
+
+/* Desktop: floating top-right of hero */
+.btn-events-float {
+  position: absolute;
+  top: 88px; /* below fixed navbar */
+  right: 28px;
+  z-index: 10;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 16px rgba(240,165,0,0.3);
+  display: inline-block;
+}
+.btn-events-float:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240,165,0,0.45);
+}
+
+/* Mobile: hidden by default (shows in hero-actions) */
+.btn-events-mobile {
+  display: none;
+  font-family: var(--font-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  transition: background var(--transition), transform var(--transition);
+  text-align: center;
+}
+.btn-events-mobile:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  /* Hide float button on mobile */
+  .btn-events-float { display: none !important; }
+  /* Show inline mobile button */
+  .btn-events-mobile { display: inline-block; }
+}
+
+/* =============================================
+   EVENTS PAGE
+   ============================================= */
+.events-page { }
+
+.event-card {
+  background: var(--navy-light);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 48px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.event-card:hover {
+  border-color: var(--gold-dim);
+  box-shadow: var(--shadow-gold);
+}
+
+/* 16:9 banner */
+.event-banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.event-body {
+  padding: 28px 32px 32px;
+}
+.event-tag {
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+.event-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.event-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  max-width: 760px;
+}
+.btn-event-details {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  display: inline-block;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-event-details:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240,165,0,0.3);
+}
+
+/* Divider */
+.events-divider {
+  border: none;
+  border-top: 1px solid var(--navy-border);
+  margin: 56px 0;
+  position: relative;
+}
+.events-divider::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--navy);
+  color: var(--gold-dim);
+  padding: 0 16px;
+  font-size: 0.8rem;
+}
+
+/* News section */
+.news-card {
+  background: var(--navy-light);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.news-card:hover {
+  border-color: var(--gold-dim);
+  box-shadow: var(--shadow-gold);
+}
+.news-banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.news-body {
+  padding: 28px 32px 32px;
+}
+.news-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.news-section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--navy-border);
+}
+.news-tag {
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+.news-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+}
+.news-desc {
+  font-size: 0.93rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 22px;
+  max-width: 760px;
+}
+.btn-news-link {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--gold);
+  padding: 9px 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  display: inline-block;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.btn-news-link:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .event-body, .news-body { padding: 20px 20px 24px; }
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 @media (max-width: 1024px) {
