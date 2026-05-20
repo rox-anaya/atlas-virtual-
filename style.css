@@ -1660,21 +1660,28 @@ footer {
   box-shadow: 0 8px 24px rgba(240,165,0,0.45);
 }
 
+/* Mobile events button wrapper — hidden on desktop */
+.hero-events-mobile-wrap {
+  display: none;
+  justify-content: center;
+  margin-top: 12px;
+}
+
 /* Mobile: hidden by default (shows in hero-actions) */
 .btn-events-mobile {
-  display: none;
   font-family: var(--font-accent);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   background: var(--gold);
   color: var(--navy);
-  padding: 12px 28px;
+  padding: 8px 20px;
   border-radius: var(--radius);
   border: 2px solid var(--gold);
   transition: background var(--transition), transform var(--transition);
   text-align: center;
+  display: inline-block;
 }
 .btn-events-mobile:hover {
   background: var(--gold-light);
@@ -1684,8 +1691,8 @@ footer {
 @media (max-width: 768px) {
   /* Hide float button on mobile */
   .btn-events-float { display: none !important; }
-  /* Show inline mobile button */
-  .btn-events-mobile { display: inline-block; }
+  /* Show wrapper (makes it a centered row below buttons) */
+  .hero-events-mobile-wrap { display: flex; }
 }
 
 /* =============================================
